@@ -7,6 +7,22 @@ namespace CSharp.Models
 {
     public class Pessoa
     {
+        // criando um constructor
+        public Pessoa(string nome, string sobrenome, int idade, decimal dinheiro, double altura, DateTime dataAtual, DateTime dataSemanaQueVem){
+            Nome =nome;
+            Sobrenome=sobrenome;
+            Idade=idade;
+            Altura = altura;
+            Dinheiro = dinheiro;
+            DataAtual = dataAtual;
+            DataSemanaQueVem = dataSemanaQueVem;
+        }
+
+        public Pessoa(){
+
+        }
+
+        // protegendo propriedades
         private string _nome;
         private string _sobrenome;
         private int _idade;

@@ -4,11 +4,23 @@ using CSharp.Models;
 // Console.WriteLine("Hello, World!");
 
 Curso novoCurso = new Curso();
+novoCurso.Alunos = new List<Pessoa>();
 
 Console.WriteLine("Por favor, digite o nome do curso: ");
 novoCurso.Nome = Console.ReadLine();
 
-Pessoa pessoa1 = new Pessoa();
+Pessoa pessoa1 = new Pessoa(
+    nome: "Efraim",
+    sobrenome: "de Almeida Lima",
+    idade: 80,
+    altura: 1.74,
+    dinheiro: 30000,
+    dataAtual: DateTime.Now,
+    dataSemanaQueVem: DateTime.Now.AddDays(7)
+    );
+novoCurso.Adicionar(pessoa1);
+/*
+
 pessoa1.Nome = "Pastel";
 pessoa1.Sobrenome = "de Frango";
 pessoa1.Idade = 25;
@@ -20,78 +32,75 @@ pessoa1.DataAtual = dataAtual;
 DateTime dataSemanaQueVem = DateTime.Now.AddDays(7);
 pessoa1.DataSemanaQueVem = dataSemanaQueVem;
 pessoa1.Apresentar();
-novoCurso.Adicionar(pessoa1);
-
-
-static List<string> Inputs(){
-
-    Curso novoCurso = new Curso();
-
+*/
+void Inputs(){
+/*static List<string> Inputs(){
     string[] dadosPessoa2 = {};
-    List<string> Lista = dadosPessoa2.ToList();
-
+    List<string> Lista = dadosPessoa2.ToList();*/
     Pessoa pessoa2 = new Pessoa();
 
     Console.WriteLine("Digite o nome: ");
     pessoa2.Nome = Console.ReadLine();
     string nome = Convert.ToString(pessoa2.Nome);
-    Lista.Add(nome);
+    // Lista.Add(nome);
     Console.WriteLine("Digite o sobrenome: ");
     pessoa2.Sobrenome = Console.ReadLine();
     string sobrenome = Convert.ToString(pessoa2.Sobrenome);
-    Lista.Add(sobrenome);
+    // Lista.Add(sobrenome);
     Console.WriteLine("Digite a idade: ");
     pessoa2.Idade = Convert.ToInt32(Console.ReadLine());
     string idade = Convert.ToString(pessoa2.Idade);
-    Lista.Add(idade);
+    // Lista.Add(idade);
     Console.WriteLine("Digite o representante legal: ");
     pessoa2.RepresentanteLegal = Console.ReadLine();
     string representante = Convert.ToString(pessoa2.RepresentanteLegal);
-    Lista.Add(representante);
+    // Lista.Add(representante);
     Console.WriteLine("Digite a altura: ");
     pessoa2.Altura = Convert.ToDouble(Console.ReadLine());
     string altura = Convert.ToString(pessoa2.Altura);
-    Lista.Add(altura);
+    // Lista.Add(altura);
     Console.WriteLine("Digite o dinheiro: ");
     pessoa2.Dinheiro = Convert.ToDecimal(Console.ReadLine());
     string dinheiro = Convert.ToString(pessoa2.Dinheiro);
-    Lista.Add(dinheiro);
+    // Lista.Add(dinheiro);
     DateTime dataAtual = DateTime.Now;
     pessoa2.DataAtual = dataAtual;
     string dataAtual2 = Convert.ToString(pessoa2.DataAtual);
-    Lista.Add(dataAtual2);
+    // Lista.Add(dataAtual2);
     DateTime dataSemanaQueVem = DateTime.Now.AddDays(7);
     pessoa2.DataSemanaQueVem = dataSemanaQueVem;
     string semanaQueVem = Convert.ToString(pessoa2.DataSemanaQueVem);
-    Lista.Add(semanaQueVem);
+    // Lista.Add(semanaQueVem);
     pessoa2.Apresentar();
     novoCurso.Adicionar(pessoa2);
-    return Lista;
+    // return Lista;
 }
-
-novoCurso.Listar();
 
 string opcao;
 bool saindo = true;
+List<string> Lista = new List<string>();
 
-while(saindo=true){
+while(saindo==true){
     Console.WriteLine("Digite a sua opção");
     Console.WriteLine("1 - Cadastrar");
     Console.WriteLine("2 - Listar dados");
     Console.WriteLine("3 - Sair");
 
     opcao = Console.ReadLine();
-    List<string> Lista = Inputs();
+    // if (opcao != "2" && opcao != "3") Lista = Inputs();
     
     switch(opcao)
     {
-        case "1": Console.WriteLine("Fazendo"); Lista = Inputs(); break;
-        case "2": Console.WriteLine("Fazendo o 2"); Listar(Lista); break;
-        // case "3": Console.WriteLine("Fazendo o 3"); Environment.Exit(0); break;
+        // case "1": Console.WriteLine("Fazendo"); Lista = Inputs(); break;
+        // case "2": Console.WriteLine("Fazendo o 2"); Listar(Lista); break;
+        case "1": Console.WriteLine("Fazendo"); Inputs(); break;
+        case "2": Console.WriteLine("Fazendo o 2"); novoCurso.Listar(); break;
         case "3": Console.WriteLine("Fazendo o 3"); saindo=false; break;
         default: Console.WriteLine("Opção Inválida"); break;
     }
-    // Console.Clear();
+    Console.WriteLine("Digite qualquer tecla para sair. ");
+    Console.ReadLine();
+    Console.Clear();
 }
 
 Console.WriteLine("O programa acabou");

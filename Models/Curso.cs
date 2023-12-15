@@ -35,10 +35,16 @@ namespace CSharp.Models
         }
 
         public bool Remover(Pessoa aluno){
+            if (Alunos == null){
+                Alunos = new List<Pessoa>();
+            }
             return Alunos.Remove(aluno);
         }
 
         public void Listar(){
+            if (Alunos == null){
+                Alunos = new List<Pessoa>();
+            }
             foreach(Pessoa aluno in Alunos){
                 Console.WriteLine(aluno.NomeCompleto);
             };
