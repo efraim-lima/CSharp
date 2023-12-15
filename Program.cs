@@ -1,12 +1,16 @@
-﻿using CSharp.Models;
+using CSharp.Models;
 
 // See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+// Console.WriteLine("Hello, World!");
 
+Curso novoCurso = new Curso();
+
+Console.WriteLine("Por favor, digite o nome do curso: ");
+novoCurso.Nome = Console.ReadLine();
 
 Pessoa pessoa1 = new Pessoa();
-
 pessoa1.Nome = "Pastel";
+pessoa1.Sobrenome = "de Frango";
 pessoa1.Idade = 25;
 pessoa1.RepresentanteLegal = "Tio Zé";
 pessoa1.Altura = 1.90;
@@ -16,47 +20,105 @@ pessoa1.DataAtual = dataAtual;
 DateTime dataSemanaQueVem = DateTime.Now.AddDays(7);
 pessoa1.DataSemanaQueVem = dataSemanaQueVem;
 pessoa1.Apresentar();
+novoCurso.Adicionar(pessoa1);
 
-void Inputs(){
+
+static List<string> Inputs(){
+
+    Curso novoCurso = new Curso();
+
+    string[] dadosPessoa2 = {};
+    List<string> Lista = dadosPessoa2.ToList();
+
     Pessoa pessoa2 = new Pessoa();
+
     Console.WriteLine("Digite o nome: ");
     pessoa2.Nome = Console.ReadLine();
+    string nome = Convert.ToString(pessoa2.Nome);
+    Lista.Add(nome);
+    Console.WriteLine("Digite o sobrenome: ");
+    pessoa2.Sobrenome = Console.ReadLine();
+    string sobrenome = Convert.ToString(pessoa2.Sobrenome);
+    Lista.Add(sobrenome);
     Console.WriteLine("Digite a idade: ");
     pessoa2.Idade = Convert.ToInt32(Console.ReadLine());
+    string idade = Convert.ToString(pessoa2.Idade);
+    Lista.Add(idade);
     Console.WriteLine("Digite o representante legal: ");
     pessoa2.RepresentanteLegal = Console.ReadLine();
+    string representante = Convert.ToString(pessoa2.RepresentanteLegal);
+    Lista.Add(representante);
     Console.WriteLine("Digite a altura: ");
     pessoa2.Altura = Convert.ToDouble(Console.ReadLine());
+    string altura = Convert.ToString(pessoa2.Altura);
+    Lista.Add(altura);
     Console.WriteLine("Digite o dinheiro: ");
     pessoa2.Dinheiro = Convert.ToDecimal(Console.ReadLine());
+    string dinheiro = Convert.ToString(pessoa2.Dinheiro);
+    Lista.Add(dinheiro);
     DateTime dataAtual = DateTime.Now;
     pessoa2.DataAtual = dataAtual;
+    string dataAtual2 = Convert.ToString(pessoa2.DataAtual);
+    Lista.Add(dataAtual2);
     DateTime dataSemanaQueVem = DateTime.Now.AddDays(7);
     pessoa2.DataSemanaQueVem = dataSemanaQueVem;
+    string semanaQueVem = Convert.ToString(pessoa2.DataSemanaQueVem);
+    Lista.Add(semanaQueVem);
     pessoa2.Apresentar();
+    novoCurso.Adicionar(pessoa2);
+    return Lista;
 }
 
+novoCurso.Listar();
 
 string opcao;
 bool saindo = true;
 
-while(saindo){
+while(saindo=true){
     Console.WriteLine("Digite a sua opção");
     Console.WriteLine("1 - Cadastrar");
-    Console.WriteLine("2 - Apagar");
+    Console.WriteLine("2 - Listar dados");
     Console.WriteLine("3 - Sair");
 
     opcao = Console.ReadLine();
+    List<string> Lista = Inputs();
     
     switch(opcao)
     {
-        case "1": Console.WriteLine("Fazendo"); break;
-        case "2": Console.WriteLine("Fazendo o 2"); break;
+        case "1": Console.WriteLine("Fazendo"); Lista = Inputs(); break;
+        case "2": Console.WriteLine("Fazendo o 2"); Listar(Lista); break;
         // case "3": Console.WriteLine("Fazendo o 3"); Environment.Exit(0); break;
         case "3": Console.WriteLine("Fazendo o 3"); saindo=false; break;
         default: Console.WriteLine("Opção Inválida"); break;
     }
-    Console.Clear();
+    // Console.Clear();
 }
 
 Console.WriteLine("O programa acabou");
+
+void Listar(List<string> Lista = null){
+    string[] dados = {
+        "nome: Zé", 
+        "idade: 25", 
+        "representante: Joao", 
+        "altura: 1.70", 
+        "dinheiro: R$ 75.90", 
+        "data: 14/12/2023", 
+        "data futura: 21/12/2023"
+    };
+
+    if (dados.Length < Lista.Count || dados.Length > Lista.Count){
+        Array.Resize(ref dados, Lista.Count);
+    }
+
+    for (int i = 0; i < dados.Length; i++){
+        Console.WriteLine(dados[i]);
+    };
+
+    // Console.WriteLine("Usando foreach");
+    // int contador = 0;
+    // foreach(string item in dados){
+    //     Console.WriteLine(item);
+    //     contador++;
+    // };
+}

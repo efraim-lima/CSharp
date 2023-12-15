@@ -7,9 +7,51 @@ namespace CSharp.Models
 {
     public class Pessoa
     {
-        public string Nome {get;set;}
-        public int Idade {get;set;}
-        public string RepresentanteLegal {get;set;}
+        private string _nome;
+        private string _sobrenome;
+        private int _idade;
+        private string _representanteLegal;
+
+        public string Nome {
+            // get{
+            //     return _nome.ToUpper();
+            // };
+            get => _nome.ToUpper();
+            
+            set{
+                if (value == ""){
+                    throw new ArgumentException("Nome não pode ser vazio");
+                }
+                _nome = value;
+            }
+        }
+
+        public string Sobrenome {get;set;}
+
+        public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+
+        public int Idade {
+            get => _idade;
+            set{
+                if (value < 0){
+                    throw new ArgumentException("Idade não pode ser negativa");
+                }
+
+                _idade = value;
+            }
+        }
+
+        public string RepresentanteLegal {
+            get => _representanteLegal.ToUpper();
+            set{
+                if (value == ""){
+                    throw new ArgumentException("Nome não pode ser vazio");
+                }
+                
+                _representanteLegal = value;
+            }
+        }
+
         public double Altura {get;set;}
         public decimal Dinheiro {get;set;}
         public DateTime DataAtual {get;set;}
