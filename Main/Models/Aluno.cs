@@ -2,13 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CSharp.Interfaces;
 
 namespace CSharp.Models
 {
     public sealed class Aluno : Pessoa {
-        public Aluno (string nome, string representanteLegal) : base(nome){
-            _representanteLegal = representanteLegal;
+        public Aluno (string nome) : base(nome){
+            _nome = nome;
         }
+        public Aluno(){
+
+        }
+
         public string _representanteLegal;
         public string RepresentanteLegal {
             get => _representanteLegal.ToUpper();

@@ -1,0 +1,7 @@
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Test\bin\Debug\net8.0\CoverletSourceRootsMapping_Test
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Test\obj\Debug\net8.0\Test.csproj.AssemblyReference.cache
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Test\obj\Debug\net8.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Test\obj\Debug\net8.0\Test.AssemblyInfoInputs.cache
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Test\obj\Debug\net8.0\Test.AssemblyInfo.cs
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Test\obj\Debug\net8.0\Test.csproj.CoreCompileInputs.cache
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Test\obj\Debug\net8.0\Test.sourcelink.json

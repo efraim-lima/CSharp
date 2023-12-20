@@ -22,7 +22,7 @@ namespace CSharp.Models
         }
 
         public Pessoa(){
-            
+
         }
         
         // protegendo propriedades
@@ -40,7 +40,6 @@ namespace CSharp.Models
                 _nome = value;
             }
         }
-
         private string _sobrenome;
         public string Sobrenome {get;set;}
 

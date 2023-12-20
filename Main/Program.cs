@@ -9,7 +9,7 @@ novoCurso.Alunos = new List<Pessoa>();
 Console.WriteLine("Por favor, digite o nome do curso: ");
 novoCurso.Nome = Console.ReadLine();
 
-Pessoa pessoa1 = new Pessoa(
+Professor pessoa1 = new Professor(
     nome: "Efraim",
     sobrenome: "de Almeida Lima",
     idade: 80,
@@ -37,7 +37,7 @@ void Inputs(){
 /*static List<string> Inputs(){
     string[] dadosPessoa2 = {};
     List<string> Lista = dadosPessoa2.ToList();*/
-    Pessoa pessoa2 = new Pessoa();
+    Aluno pessoa2 = new Aluno();
 
     Console.WriteLine("Digite o nome: ");
     pessoa2.Nome = Console.ReadLine();
@@ -59,10 +59,6 @@ void Inputs(){
     pessoa2.Altura = Convert.ToDouble(Console.ReadLine());
     string altura = Convert.ToString(pessoa2.Altura);
     // Lista.Add(altura);
-    Console.WriteLine("Digite o dinheiro: ");
-    pessoa2.Dinheiro = Convert.ToDecimal(Console.ReadLine());
-    string dinheiro = Convert.ToString(pessoa2.Dinheiro);
-    // Lista.Add(dinheiro);
     DateTime dataAtual = DateTime.Now;
     pessoa2.DataAtual = dataAtual;
     string dataAtual2 = Convert.ToString(pessoa2.DataAtual);

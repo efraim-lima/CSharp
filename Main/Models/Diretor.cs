@@ -2,12 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CSharp.Interfaces;
 
 namespace CSharp.Models
 {
-    public class Diretor : Pessoa
+    public class Diretor : Pessoa, Acoes
     {
         public decimal Dinheiro {get;set;}
+        public bool Cadastro { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool Matricula { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool Acesso { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override void Apresentar(){
             Console.WriteLine($"Meu nome é {Nome}" +

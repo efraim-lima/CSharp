@@ -1,0 +1,15 @@
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\CSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\CSharp.AssemblyInfoInputs.cache
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\CSharp.AssemblyInfo.cs
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\CSharp.csproj.CoreCompileInputs.cache
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\CSharp.sourcelink.json
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\bin\Debug\net8.0\CSharp.exe
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\bin\Debug\net8.0\CSharp.deps.json
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\bin\Debug\net8.0\CSharp.runtimeconfig.json
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\bin\Debug\net8.0\CSharp.dll
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\bin\Debug\net8.0\CSharp.pdb
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\CSharp.dll
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\refint\CSharp.dll
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\CSharp.pdb
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\CSharp.genruntimeconfig.cache
+C:\Users\katia\OneDrive\Documentos\GitHub\CSharp\Main\obj\Debug\net8.0\ref\CSharp.dll

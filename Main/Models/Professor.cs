@@ -2,13 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CSharp.Interfaces;
 
 namespace CSharp.Models
 {
     public sealed class Professor : Pessoa {
-        public Professor(string nome) : base(nome){
+        public Professor(string nome, string sobrenome, int idade, double altura, DateTime dataAtual, DateTime dataSemanaQueVem) : base(nome, sobrenome, idade, altura, dataAtual, dataSemanaQueVem) {
 
         }
+        public Professor(string nome, string sobrenome, int idade, double altura, DateTime dataAtual, DateTime dataSemanaQueVem, decimal dinheiro){
+
+                }
+        public decimal _dinheiro;
         public decimal Dinheiro {get;set;}
         public override void Apresentar()
         {
