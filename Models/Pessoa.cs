@@ -5,29 +5,28 @@ using System.Threading.Tasks;
 
 namespace CSharp.Models
 {
-    public class Pessoa
+    public abstract class Pessoa
     {
         // criando um constructor
-        public Pessoa(string nome, string sobrenome, int idade, decimal dinheiro, double altura, DateTime dataAtual, DateTime dataSemanaQueVem){
-            Nome =nome;
-            Sobrenome=sobrenome;
-            Idade=idade;
+        public Pessoa(string nome, string sobrenome, int idade, double altura, DateTime dataAtual, DateTime dataSemanaQueVem){
+            Nome = nome;
+            Sobrenome = sobrenome;
+            Idade = idade;
             Altura = altura;
-            Dinheiro = dinheiro;
             DataAtual = dataAtual;
             DataSemanaQueVem = dataSemanaQueVem;
         }
 
-        public Pessoa(){
-
+        public Pessoa(string nome){
+            Nome = nome;
         }
 
+        public Pessoa(){
+            
+        }
+        
         // protegendo propriedades
-        private string _nome;
-        private string _sobrenome;
-        private int _idade;
-        private string _representanteLegal;
-
+        public string  _nome;
         public string Nome {
             // get{
             //     return _nome.ToUpper();
@@ -42,10 +41,12 @@ namespace CSharp.Models
             }
         }
 
+        private string _sobrenome;
         public string Sobrenome {get;set;}
 
         public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
 
+        private int _idade;
         public int Idade {
             get => _idade;
             set{
@@ -57,27 +58,15 @@ namespace CSharp.Models
             }
         }
 
-        public string RepresentanteLegal {
-            get => _representanteLegal.ToUpper();
-            set{
-                if (value == ""){
-                    throw new ArgumentException("Nome não pode ser vazio");
-                }
-                
-                _representanteLegal = value;
-            }
-        }
-
         public double Altura {get;set;}
-        public decimal Dinheiro {get;set;}
         public DateTime DataAtual {get;set;}
         public DateTime DataSemanaQueVem {get;set;}
 
 
-        public void Apresentar() {
+        public virtual void Apresentar() {
             Console.WriteLine($"Meu nome é {Nome}" +
-            $"e possuo {Idade} anos. \nMeu representante é: {RepresentanteLegal}" +
-            $"\nAgora, minha altura é {Altura.ToString("0.00")} e estou com R${Dinheiro} no bolso." +
+            $"e possuo {Idade} anos. \n" +
+            $"\nMinha altura é {Altura.ToString("0.00")}" +
             $"\nA data atual é {DataAtual.ToString("dd/MM/yyyy")} e daqui ha uma semana será {DataSemanaQueVem.ToString("dd/MM/yyyy")}");
         }
     }

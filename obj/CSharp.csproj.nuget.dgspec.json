@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cyber\\Documents\\CSharp\\CSharp.csproj": {}
+    "C:\\Users\\katia\\OneDrive\\Documentos\\GitHub\\CSharp\\CSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cyber\\Documents\\CSharp\\CSharp.csproj": {
+    "C:\\Users\\katia\\OneDrive\\Documentos\\GitHub\\CSharp\\CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cyber\\Documents\\CSharp\\CSharp.csproj",
+        "projectUniqueName": "C:\\Users\\katia\\OneDrive\\Documentos\\GitHub\\CSharp\\CSharp.csproj",
         "projectName": "CSharp",
-        "projectPath": "C:\\Users\\cyber\\Documents\\CSharp\\CSharp.csproj",
-        "packagesPath": "C:\\Users\\cyber\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cyber\\Documents\\CSharp\\obj\\",
+        "projectPath": "C:\\Users\\katia\\OneDrive\\Documentos\\GitHub\\CSharp\\CSharp.csproj",
+        "packagesPath": "C:\\Users\\katia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\katia\\OneDrive\\Documentos\\GitHub\\CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cyber\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\katia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
