@@ -7,8 +7,9 @@ using CSharp.Interfaces;
 namespace CSharp.Models
 {
     public sealed class Aluno : Pessoa {
-        public Aluno (string nome) : base(nome){
-            _nome = nome;
+        public Aluno (string nome, string sobrenome, int idade, double altura, DateTime dataAtual, DateTime dataSemanaQueVem) : base(nome, sobrenome, idade, altura, dataAtual, dataSemanaQueVem){
+        }
+        public Aluno (string nome, string sobrenome, int idade, string representanteLegal, double altura, DateTime dataAtual, DateTime dataSemanaQueVem) {
         }
         public Aluno(){
 

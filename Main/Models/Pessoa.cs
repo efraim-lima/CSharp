@@ -17,9 +17,9 @@ namespace CSharp.Models
             DataSemanaQueVem = dataSemanaQueVem;
         }
 
-        public Pessoa(string nome){
-            Nome = nome;
-        }
+        // public Pessoa(string nome){
+        //     Nome = nome;
+        // }
 
         public Pessoa(){
 
@@ -40,12 +40,12 @@ namespace CSharp.Models
                 _nome = value;
             }
         }
-        private string _sobrenome;
+        public string _sobrenome;
         public string Sobrenome {get;set;}
 
         public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
 
-        private int _idade;
+        public int _idade;
         public int Idade {
             get => _idade;
             set{

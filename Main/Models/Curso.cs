@@ -18,11 +18,11 @@ namespace CSharp.Models
             }
         }
 
-        public List<Pessoa> Alunos { get; set; }
+        public List<Aluno> Alunos { get; set; }
 
-        public void Adicionar(Pessoa aluno) {
+        public void Adicionar(Aluno aluno) {
             if (Alunos == null){
-                Alunos = new List<Pessoa>();
+                Alunos = new List<Aluno>();
             }
             Console.WriteLine($"Aluno aqui: {aluno}");
             Alunos.Add(aluno);
@@ -34,18 +34,18 @@ namespace CSharp.Models
             return Alunos.Count;
         }
 
-        public bool Remover(Pessoa aluno){
+        public bool Remover(Aluno aluno){
             if (Alunos == null){
-                Alunos = new List<Pessoa>();
+                Alunos = new List<Aluno>();
             }
             return Alunos.Remove(aluno);
         }
 
         public void Listar(){
             if (Alunos == null){
-                Alunos = new List<Pessoa>();
+                Alunos = new List<Aluno>();
             }
-            foreach(Pessoa aluno in Alunos){
+            foreach(Aluno aluno in Alunos){
                 Console.WriteLine(aluno.NomeCompleto);
             };
         }

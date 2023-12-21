@@ -4,21 +4,21 @@ using CSharp.Models;
 // Console.WriteLine("Hello, World!");
 
 Curso novoCurso = new Curso();
-novoCurso.Alunos = new List<Pessoa>();
+novoCurso.Alunos = new List<Aluno>();
 
 Console.WriteLine("Por favor, digite o nome do curso: ");
 novoCurso.Nome = Console.ReadLine();
 
-Professor pessoa1 = new Professor(
-    nome: "Efraim",
-    sobrenome: "de Almeida Lima",
-    idade: 80,
-    altura: 1.74,
-    dinheiro: 30000,
-    dataAtual: DateTime.Now,
-    dataSemanaQueVem: DateTime.Now.AddDays(7)
-    );
-novoCurso.Adicionar(pessoa1);
+// Aluno pessoa1 = new Aluno(
+//     nome: "Efraim",
+//     sobrenome: "de Almeida Lima",
+//     idade: 80,
+//     altura: 1.74,
+//     representanteLegal: "Pastel",
+//     dataAtual: DateTime.Now,
+//     dataSemanaQueVem: DateTime.Now.AddDays(7)
+//     );
+// novoCurso.Adicionar(pessoa1);
 /*
 
 pessoa1.Nome = "Pastel";
@@ -106,8 +106,7 @@ void Listar(List<string> Lista = null){
         "nome: Zé", 
         "idade: 25", 
         "representante: Joao", 
-        "altura: 1.70", 
-        "dinheiro: R$ 75.90", 
+        "altura: 1.70",
         "data: 14/12/2023", 
         "data futura: 21/12/2023"
     };
